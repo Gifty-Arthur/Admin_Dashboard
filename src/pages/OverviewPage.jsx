@@ -4,6 +4,7 @@ import Header from "../components/common/Header";
 import { motion } from "framer-motion";
 import StatCard from "../components/common/StatCard";
 import { BarChart2, ShoppingBag, Users, Zap } from "lucide-react";
+import SalesOverviewChart from "../components/overview/SalesOverviewChart";
 
 const OverviewPage = () => {
   return (
@@ -27,13 +28,13 @@ const OverviewPage = () => {
           <StatCard
             name="Total Users"
             icon={Users}
-            value="$12345"
+            value="$15345"
             color="#8B5CF6"
           />
           <StatCard
             name="Total Users"
             icon={ShoppingBag}
-            value="$12345"
+            value="$12305"
             color="#EC4899"
           />
           <StatCard
@@ -43,6 +44,11 @@ const OverviewPage = () => {
             color="#108981"
           />
         </motion.div>
+
+        {/* CHART */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <SalesOverviewChart />
+        </div>
       </main>
     </div>
   );
