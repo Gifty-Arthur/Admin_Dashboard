@@ -33,7 +33,9 @@ const SalesOverviewChart = () => {
       exit={{ opacity: 0, y: 0 }}
       transition={{ duration: 1 }}
     >
-      <h2 className="text-lg font-medium mb-4 text-gray-100">Sales Overview</h2>
+      <h2 className="text-lg font-medium mb-4 text-gray-100 ml-4">
+        Sales Overview
+      </h2>
 
       <div className="h-80">
         <ResponsiveContainer width={"100%"} height={"100%"}>
