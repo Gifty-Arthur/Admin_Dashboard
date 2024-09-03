@@ -1,6 +1,4 @@
-import React from "react";
 import { motion } from "framer-motion";
-
 import {
   PieChart,
   Pie,
@@ -17,19 +15,22 @@ const categoryData = [
   { name: "Books", value: 2100 },
   { name: "Sports & Outdoors", value: 1900 },
 ];
+
 const COLORS = ["#6366F1", "#8B5CF6", "#EC4899", "#10B981", "#F59E0B"];
 
 const CategoryDistributionChart = () => {
   return (
     <motion.div
+      className="bg-gray-800 bg-opacity-50 backdrop-blur-md shadow-lg rounded-xl p-6 border border-gray-700"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3 }}
-      className="bg-gray-800 bg-opacity-50 backdrop-blur-md rounded-xl p-6 border border-gray-700"
     >
-      <h2 className="text-lg font-medium text-white mb-4">
-        <div className="h-80">
-          <ResponsiveContainer width="100%" height="100%"></ResponsiveContainer>
+      <h2 className="text-lg font-medium mb-4 text-gray-100">
+        Category Distribution
+      </h2>
+      <div className="h-80">
+        <ResponsiveContainer width={"100%"} height={"100%"}>
           <PieChart>
             <Pie
               data={categoryData}
@@ -59,10 +60,9 @@ const CategoryDistributionChart = () => {
             />
             <Legend />
           </PieChart>
-        </div>
-      </h2>
+        </ResponsiveContainer>
+      </div>
     </motion.div>
   );
 };
-
 export default CategoryDistributionChart;
